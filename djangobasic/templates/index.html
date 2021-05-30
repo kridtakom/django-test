@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>DJANGO PRACTICE</h2>
+<h2>NAME: {{name}}</h2>
+<hr />
+<h3>Tag</h3>
+<ul>
+    {% for tag in tags %}
+    <li>{{tag}}</li>
+    {% endfor %}
+</ul>
+<h3>Rating</h3>
+<ul>
+    {% if rating > 3 %}
+    <p>ดีมาก</p>
+    {% else %}
+    <p>ไม่ได้รับความนิยม</p>
+    {% endif %}
+</ul>
+{% endblock %}
